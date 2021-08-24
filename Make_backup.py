@@ -21,7 +21,11 @@ pyautogui.mouseDown() # Clica e segura com o botão esquerdo o mouse
 pyautogui.moveTo(534, 867)
 sleep(1)
 pyautogui.hotkey('alt', 'tab')
+sleep(1)
 pyautogui.mouseUp() # Desclica e segura com o botão esquerdo o mouse
+sleep(2)
+
+pyautogui.alert('ARQUIVO TRANSFERIDO PARA O GOOGLE DRIVE. LIBERADO !')
 '''mause = pyautogui.position()
 print(mause)'''
 
