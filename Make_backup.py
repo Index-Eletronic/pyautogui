@@ -8,7 +8,7 @@ pyautogui.press('winleft')
 pyautogui.write('chrome')
 pyautogui.press('enter')
 sleep(2)
-pyautogui.write('https://drive.google.com/drive/my-dive')
+pyautogui.write('https://drive.google.com/drive/my-drive')
 pyautogui.press('enter')
 #Acessar a area de trabalho
 #Clicar no arquivo para back e arrastar ele para o Google Drive
