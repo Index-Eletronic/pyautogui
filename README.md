@@ -1,0 +1,2 @@
+# pyautogui
+ Biblioteca pyautogui
