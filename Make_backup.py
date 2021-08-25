@@ -1,8 +1,11 @@
 import pyautogui
 from time import sleep
+import urllib
+import urllib.request
 
 pyautogui.alert('NÃO MEXA NO COMPUTADOR.')
 pyautogui.PAUSE = 0.5
+
 #Abrir o Google Drive no Computador
 
 pyautogui.press('winleft')
@@ -11,8 +14,9 @@ pyautogui.write('chro')
 pyautogui.press('enter')
 sleep(1)
 pyautogui.write('https://drive.google.com/drive/my-drive')
+sleep(1)
 pyautogui.press('enter')
-
+sleep(1)
 #Acessar a area de trabalho
 pyautogui.hotkey('winleft', 'd')
 #Point(x=193, y=36)
