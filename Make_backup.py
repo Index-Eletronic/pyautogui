@@ -1,7 +1,5 @@
 import pyautogui
 from time import sleep
-import urllib
-import urllib.request
 
 pyautogui.alert('NÃO MEXA NO COMPUTADOR.')
 pyautogui.PAUSE = 0.5
