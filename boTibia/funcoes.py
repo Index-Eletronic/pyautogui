@@ -1,4 +1,5 @@
 from time import sleep
+import pyautogui
 ##Titulos
 
 c = ('\033[m',         # cor 0 = sem cores
@@ -19,6 +20,41 @@ def titulo(msg, cor=0):
     print(c[0], end='') # Para limpar as cores
     sleep(1)
 
+
+def esq(num):
+    c = 0
+    while c <= num:
+        pyautogui.press('left')
+        sleep(0.3)
+        c += 1
+        print(c)
+
+
+def right(num):
+    c = 0
+    while c <= num:
+        pyautogui.press('right')
+        sleep(0.3)
+        c += 1
+        print(c)
+
+
+def up(num):
+    c = 0
+    while c <= num:
+        pyautogui.press('up')
+        sleep(0.3)
+        c += 1
+        print(c)
+
+
+def down(num):
+    c = 0
+    while c <= num:
+        pyautogui.press('down')
+        sleep(0.3)
+        c += 1
+        print(c)
 
 
 
