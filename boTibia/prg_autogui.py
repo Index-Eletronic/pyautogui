@@ -15,10 +15,13 @@ monster2 = "CaveRat"
 waypoint =\
     RuntimeError
 
-while keyboard.is_pressed('ESC'):
+while True:
     try:
         if onscreen :
-            funcoes.waypoint()
+            if funcoes.Sorry("sorry.jpg") != "Sorry, not possible.":
+                funcoes.waypoint()
+            else:
+                break
         else:
             if funcoes.Attack("Rat.jpg") == monster1:
                 x, y =  pyautogui.locateCenterOnScreen("Rat.jpg")
@@ -28,7 +31,7 @@ while keyboard.is_pressed('ESC'):
                 break
     except RuntimeError:
         pass
-#===============================Waypoint ==========================
+
 
 
 

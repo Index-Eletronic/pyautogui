@@ -78,5 +78,19 @@ def semfun():
     localizar a imagem na tela. Isso é útil caso a função não consiga localizar uma imagem devido a diferenças insignificantes de pixel:'''
     pass
 #==========================================================================================================
+
+#======================================= Função Trata imagem para Texto ===================================
+def Sorry(texto):
+    while True:
+        img = cv2.imread("sorry.jpg")  # imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
+        caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
+        # passo 2: pedir para tesseract extrair o texto da imagem
+        pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
+        texto = pytesseract.image_to_string(img)
+        return texto
+
+#print(imagem("battle2.jpg"))
+#==========================================================================================================
+
 def waypoint():
         esq(10)
