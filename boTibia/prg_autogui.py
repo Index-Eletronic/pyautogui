@@ -19,15 +19,32 @@ sleep(1)'''
     mouse = pyautogui.position()
     print(mouse)'''
 
-monster = "Rat"
-waypoint = 0
+monster1 = "Rat"
+monster2 = "CaveRat"
+waypoint = TypeError
 
 while True:
-    if funcoes.imagem("battle2.jpg") == monster:
-        pyautogui.click(1759, 480)
-    else:
-        if funcoes.esq(1) != waypoint:
-            funcoes.esq(1)
-            sleep(0.3)
+    try:
+        if funcoes.imagem("Rat.jpg") == monster1:
+            pyautogui.click(1759, 480)
+            sleep(10)
         else:
-            break
+            if funcoes.esq(0) != waypoint:
+                funcoes.esq(1)
+                sleep(0.3)
+            elif funcoes.right(0) != waypoint:
+                 funcoes.right(1)
+                 sleep(0.3)
+            elif funcoes.up(0) != waypoint:
+                 funcoes.up(1)
+                 sleep(0.3)
+            elif funcoes.down(0) != waypoint:
+                 funcoes.down(1)
+                 sleep(0.3)
+            else:
+                break
+    except ValueError:
+        pass
+
+
+
