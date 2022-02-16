@@ -1,0 +1,43 @@
+def imagem(texto):
+    img = cv2.imread(texto)  # imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
+    caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
+    # passo 2: pedir para tesseract extrair o texto da imagem
+    pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
+    texto = pytesseract.image_to_string(img)
+    return texto
+
+print(imagem("battle2.jpg"))
+
+
+'''
+links de instrução de instalação.
+https://www.youtube.com/watch?v=Wx3SyNwZtsA&list=PLDTHLL9OG9_BfWNqRwVnuc2ZNn8UNh1lK&index=5&t=399s&ab_channel=HashtagPrograma%C3%A7%C3%A3o
+https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i
+https://github.com/UB-Mannheim/tesseract/wiki
+
+# passo 1: ler a imagem
+imagem = cv2.imread("battle2.jpg") #imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
+
+caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
+# passo 2: pedir para tesseract extrair o texto da imagem
+pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
+texto = pytesseract.image_to_string(imagem)
+print(texto)
+'''
+
+'''
+def esq(num):
+    c = 0
+    while c <= num:
+       print(f'quantidade de vezes: ', c)
+       c += 1
+valor = 5
+
+esq(valor)
+'''
+# pyautogui.keyDown('left') # Precionar  a tecla
+
+
+while True:
+    mouse = pyautogui.position()
+    print(mouse)

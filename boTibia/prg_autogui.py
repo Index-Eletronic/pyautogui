@@ -1,19 +1,8 @@
 import pyautogui
 from time import sleep
 import funcoes
-sleep(1)
-# pyautogui.keyDown('left') # Precionar  a tecla
-'''
-def esq(num):
-    c = 0
-    while c <= num:
-       print(f'quantidade de vezes: ', c)
-       c += 1
-valor = 5
 
-esq(valor)
-'''
-left = int(input('Digite a quantidade de vezes para esquerda:' ))
+'''left = int(input('Digite a quantidade de vezes para esquerda:' ))
 right = int(input('Digite a quantidade de vezes para direita:' ))
 up = int(input('Digite a quantidade de vezes para cima:' ))
 down = int(input('Digite a quantidade de vezes para baixo:' ))
@@ -25,4 +14,20 @@ sleep(1)
 funcoes.up(up)
 sleep(1)
 funcoes.down(down)
-sleep(1)
+sleep(1)'''
+'''while True:
+    mouse = pyautogui.position()
+    print(mouse)'''
+
+monster = "Rat"
+waypoint = 0
+
+while True:
+    if funcoes.imagem("battle2.jpg") == monster:
+        pyautogui.click(1759, 480)
+    else:
+        if funcoes.esq(1) != waypoint:
+            funcoes.esq(1)
+            sleep(0.3)
+        else:
+            break

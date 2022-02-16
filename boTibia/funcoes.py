@@ -1,6 +1,7 @@
 from time import sleep
 import pyautogui
-##Titulos
+import pytesseract
+import cv2
 
 c = ('\033[m',         # cor 0 = sem cores
      '\033[0;30;41m',  # cor 1 = Vermelho
@@ -56,5 +57,14 @@ def down(num):
         c += 1
         print(c)
 
+#======================================= Função Trata imagem para Texto ===================================
+def imagem(texto):
+    img = cv2.imread(texto)  # imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
+    caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
+    # passo 2: pedir para tesseract extrair o texto da imagem
+    pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
+    texto = pytesseract.image_to_string(img)
+    return texto
 
-
+#print(imagem("battle2.jpg"))
+#==========================================================================================================
