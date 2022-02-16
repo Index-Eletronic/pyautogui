@@ -1,50 +1,36 @@
 import pyautogui
 from time import sleep
 import funcoes
+import keyboard
 
-'''left = int(input('Digite a quantidade de vezes para esquerda:' ))
-right = int(input('Digite a quantidade de vezes para direita:' ))
-up = int(input('Digite a quantidade de vezes para cima:' ))
-down = int(input('Digite a quantidade de vezes para baixo:' ))
-sleep(1)
-funcoes.esq(left)
-sleep(1)
-funcoes.right(right)
-sleep(1)
-funcoes.up(up)
-sleep(1)
-funcoes.down(down)
-sleep(1)'''
+pyautogui.useImageNotFoundException()
+
 '''while True:
     mouse = pyautogui.position()
     print(mouse)'''
 
+onscreen = pyautogui.ImageNotFoundException
 monster1 = "Rat"
 monster2 = "CaveRat"
-waypoint = TypeError
+waypoint =\
+    RuntimeError
 
-while True:
+while keyboard.is_pressed('ESC'):
     try:
-        if funcoes.imagem("Rat.jpg") == monster1:
-            pyautogui.click(1759, 480)
-            sleep(10)
+        if onscreen :
+            funcoes.waypoint()
         else:
-            if funcoes.esq(0) != waypoint:
-                funcoes.esq(1)
-                sleep(0.3)
-            elif funcoes.right(0) != waypoint:
-                 funcoes.right(1)
-                 sleep(0.3)
-            elif funcoes.up(0) != waypoint:
-                 funcoes.up(1)
-                 sleep(0.3)
-            elif funcoes.down(0) != waypoint:
-                 funcoes.down(1)
-                 sleep(0.3)
+            if funcoes.Attack("Rat.jpg") == monster1:
+                x, y =  pyautogui.locateCenterOnScreen("Rat.jpg")
+                pyautogui.click(x, y)
+                sleep(10)
             else:
                 break
-    except ValueError:
+    except RuntimeError:
         pass
+#===============================Waypoint ==========================
+
+
 
 
 

@@ -21,15 +21,17 @@ def titulo(msg, cor=0):
     print(c[0], end='') # Para limpar as cores
     sleep(1)
 
-
+#======================================= Função Waypoint  ===================================
 def esq(num):
-    c = 0
-    while c <= num:
-        pyautogui.press('left')
-        sleep(0.3)
-        c += 1
-        print(c)
-
+    if pyautogui.ImageNotFoundException:
+        c = 0
+        while c <= num:
+            pyautogui.press('left')
+            sleep(0.3)
+            c += 1
+            print(c)
+    else:
+        pass
 
 def right(num):
     c = 0
@@ -56,9 +58,9 @@ def down(num):
         sleep(0.3)
         c += 1
         print(c)
-
+#==========================================================================================================
 #======================================= Função Trata imagem para Texto ===================================
-def imagem(texto):
+def Attack(texto):
     img = cv2.imread(texto)  # imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
     caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
     # passo 2: pedir para tesseract extrair o texto da imagem
@@ -68,3 +70,13 @@ def imagem(texto):
 
 #print(imagem("battle2.jpg"))
 #==========================================================================================================
+#======================================= SEM FUNCIONALIDADE ===================================
+def semfun():
+    x, y = pyautogui.locateCenterOnScreen("Rat.jpg", confidence=0.9)
+    pyautogui.click(x, y)
+    '''O argumento de palavra-chave opcional confidenceespecifica a precisão com que a função deve 
+    localizar a imagem na tela. Isso é útil caso a função não consiga localizar uma imagem devido a diferenças insignificantes de pixel:'''
+    pass
+#==========================================================================================================
+def waypoint():
+        esq(10)
