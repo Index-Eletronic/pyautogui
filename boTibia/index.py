@@ -12,11 +12,12 @@ caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
 # passo 2: pedir para tesseract extrair o texto da imagem
 pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
 texto = pytesseract.image_to_string(imagem)
-print(texto)
-
+list(texto)
+m=texto[0]
+print(m)
 
 
 
 #funcoes.semfun()
-funcoes.lermouse()
+#funcoes.lermouse()
 

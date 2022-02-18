@@ -75,7 +75,7 @@ def semfun():
     fileObj = "Waypoint.txt"
     while True:
 
-            #x, y = pyautogui.locateCenterOnScreen("floor1.jpg", confidence=0.1)
+            x, y = pyautogui.locateCenterOnScreen("floor1.jpg", confidence=0.1)
             mouse = pyautogui.position()
             posicao = str(mouse)
             #pyautogui.click(x, y)
