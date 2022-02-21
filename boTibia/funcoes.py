@@ -104,13 +104,17 @@ def lermouse():
 
 #======================================= Função Trata imagem para Texto ===================================
 def Sorry(texto):
+    msg = "Sorry, not possible."
     while True:
         img = cv2.imread("sorry.jpg")  # imread é o metodo cv2 que le a imagem ' ('caminho da imagem')
         caminho = r"C:\Users\Acer\AppData\Local\Programs\Tesseract-OCR"
         # passo 2: pedir para tesseract extrair o texto da imagem
         pytesseract.pytesseract.tesseract_cmd = caminho + r"\tesseract.exe"
         texto = pytesseract.image_to_string(img)
+        if texto == msg:
+           texto = True
         return texto
+
 
 #print(imagem("battle2.jpg"))
 #==========================================================================================================
