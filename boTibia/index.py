@@ -16,9 +16,9 @@ from time import sleep
 #m=texto[0]
 #print(m)
 
-sleep(3)
+'''sleep(3)
 sc = pyautogui.screenshot(region=(1567,393,150,40))
-sc.save("Monster.png")
+sc.save("Monster.png")'''
 
 '''while True:
     mouse = pyautogui.position()
@@ -28,4 +28,6 @@ sc.save("Monster.png")
 
 #funcoes.semfun()
 #funcoes.lermouse()
-
+mouse = pyautogui.locateOnScreen("qrcode.png")
+#pyautogui.moveTo(x, y)
+pyautogui.doubleClick(mouse)
