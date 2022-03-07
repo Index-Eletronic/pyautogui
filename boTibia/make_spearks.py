@@ -16,7 +16,7 @@ def regenera():
     i = 0
     while i <= manapotion:
         sleep(2.1)
-        pyautogui.press("hotmana")
+        pyautogui.press(hotmana)
         sleep(1)
         i += 1
         mana += 100
@@ -27,7 +27,7 @@ def arrowns():
     global  totalarrows,mana
     while c <= qt:
         sleep(2.1)
-        pyautogui.press("hotArrow")
+        pyautogui.press(hotArrow)
         sleep(1)
         c += 1
         mana -= 100
