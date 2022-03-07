@@ -44,7 +44,7 @@ while True:
        qtarrow = 0
        print("~=~= FINALIZADO! ~=~=")
        print("Index Automation")
-       msg = ("ENTER PARA SAIR")
+       msg = print(input("ENTER PARA SAIR"))
        break
 #PS C:\Users\Acer\Documents\GitHub> pyinstaller --onefile .\pyautogui\boTibia\make_spearks.py
 
